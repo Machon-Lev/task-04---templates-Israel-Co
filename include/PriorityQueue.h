@@ -3,18 +3,19 @@
 #include <iostream>
 #include <list>
 #include <exception>
+#include "Dog.h"
 
 class PriorityQueue {
 private:
-	std::list<float> _queue;
+	std::list<Dog> _queue;
 public:
 	// You need to complete the implement : 
-	void push(const float& t);
-	float poll();
+	void push(const Dog& t);
+	Dog poll();
 };
 
 struct MyComparator {
-	float operator()(float a, float b) const {
+	Dog operator()(Dog a, Dog b) const {
 		return a - b;
 	}
 };
