@@ -6,17 +6,15 @@
 
 class PriorityQueue {
 private:
-	std::list<int> _queue;
+	std::list<float> _queue;
 public:
-	PriorityQueue();
-	~PriorityQueue();
 	// You need to complete the implement : 
-	void push(const int& t);
-	int poll();
+	void push(const float& t);
+	float poll();
 };
 
 struct MyComparator {
-	int operator()(int a, int b) const {
+	float operator()(float a, float b) const {
 		return a - b;
 	}
 };
